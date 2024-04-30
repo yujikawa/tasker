@@ -117,3 +117,77 @@ button {
   margin-bottom: 10px;
   /* 各inputフォームの間に余白を追加 */
 }
+
+/* Tasker css */
+.tasker-container {
+  flex-direction: column;
+}
+
+.tasker-input-group {
+  display: flex;
+  text-align: end;
+}
+
+.input-textfiled {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-save-form {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.tasker-input-group .input-form {
+  flex: 1;
+  text-align: right;
+}
+
+.title-input {
+  width: 100%;
+}
+
+.title-input Input {
+  width: 100%;
+  margin: 10px;
+}
+
+.description-input {
+height: 100%;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.input-title-group {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.input-save-group {
+  margin: 0px 10px 10px 0px;
+
+}
+
+.date-input {
+  flex: 1;
+
+}
+
+
+.tasker-task-group {
+  display: flex;
+}
+
+.tasker-gantt {
+  flex: 1;
+
+  background-color: rgb(109, 69, 20);
+}
+
+.tasker-table {
+  flex: 1;
+  background-color: #943535;
+}
