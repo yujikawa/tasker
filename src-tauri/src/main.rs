@@ -11,7 +11,7 @@ fn greet(name: &str) -> String {
 
 fn main() {
     let migrations = vec![Migration {
-        version: 1,
+        version: 0,
         description: "create_initial_tables",
         sql: include_str!("../migrations/init.sql"),
         kind: MigrationKind::Up,
