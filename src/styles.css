@@ -193,7 +193,9 @@ button {
   background-color: #943535;
 }
 
-.title {
-}
-.title label {
+.edit-button {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+
 }

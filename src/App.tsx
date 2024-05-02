@@ -8,9 +8,11 @@ import { TabsList } from '@mui/base/TabsList';
 import { TabPanel } from '@mui/base/TabPanel';
 import { Tab } from '@mui/base/Tab';
 
+
 function App() {
   const [result, setResult] = useState([]);
-  
+
+
   const taskerDB = new TaskerDB("sqlite:tasker.db");
 
 
@@ -26,14 +28,10 @@ function App() {
 
   return (
     <div className="container">
+      <InputForm />
       <div className="title">
         <img src="../src-tauri/icons/Square89x89Logo.png" ></img>
       </div>
-
-      <div className="tasker-container">
-        <InputForm />
-      </div>
-
 
       <Tabs defaultValue={0}>
         <TabsList>
@@ -41,12 +39,15 @@ function App() {
           <Tab value={1}>Done</Tab>
         </TabsList>
         <TabPanel value={0}>
+          <h2>Work in progress</h2>
           <TaskTable rows={result.filter((r: MyTask) => r.status == 0)} />
         </TabPanel>
         <TabPanel value={1}>
+          <h2>Done</h2>
           <TaskTable rows={result.filter((r: MyTask) => r.status == 1)} />
         </TabPanel>
       </Tabs>
+
     </div>
   );
 }
