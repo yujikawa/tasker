@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import dayjs from 'dayjs';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -17,7 +16,6 @@ import { MyTask } from "../TaskerDB";
 import TaskerDB from '../TaskerDB';
 
 function TaskTable({ rows }: { rows: Array<MyTask> }) {
-    const [selected, setSelected] = useState(false);
     const taskerDB = new TaskerDB("sqlite:tasker.db");
 
     // let rows = props.rows;
@@ -67,7 +65,7 @@ function TaskTable({ rows }: { rows: Array<MyTask> }) {
                                     onChange={() => {
                                         let status = row.status == 0 ? 1 : 0;
                                         taskerDB.update_task_status(row.id, status);
-                                        setSelected(status == 0 ? false : true);
+                                        // setSelected(status == 0 ? false : true);
                                     }}
                                 >
                                     <CheckIcon />

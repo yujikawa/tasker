@@ -10,12 +10,20 @@ fn greet(name: &str) -> String {
 }
 
 fn main() {
-    let migrations = vec![Migration {
-        version: 0,
-        description: "create_initial_tables",
-        sql: include_str!("../migrations/init.sql"),
-        kind: MigrationKind::Up,
-    }];
+    let migrations = vec![
+        Migration {
+            version: 0,
+            description: "create_initial_tables",
+            sql: include_str!("../migrations/init.sql"),
+            kind: MigrationKind::Up,
+        },
+        Migration {
+            version: 1,
+            description: "create_category",
+            sql: include_str!("../migrations/add_category.sql"),
+            kind: MigrationKind::Up,
+        },
+    ];
     tauri::Builder::default()
         .plugin(
             tauri_plugin_sql::Builder::default()
