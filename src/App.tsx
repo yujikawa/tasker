@@ -51,7 +51,9 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Tasker</h1>
+      <div className="title">
+        <img src="../src-tauri/icons/Square89x89Logo.png" ></img>
+      </div>
       <div className="tasker-container">
         <form className="tasker-input-group"
           onSubmit={(e) => {
