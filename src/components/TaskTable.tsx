@@ -14,12 +14,33 @@ import CheckIcon from '@mui/icons-material/Check';
 import ToggleButton from '@mui/material/ToggleButton';
 import { MyTask } from "../TaskerDB";
 import TaskerDB from '../TaskerDB';
+import Typography from '@mui/material/Typography';
+import ChecklistRtlIcon from '@mui/icons-material/ChecklistRtl';
 
 function TaskTable({ rows }: { rows: Array<MyTask> }) {
     const taskerDB = new TaskerDB("sqlite:tasker.db");
 
     // let rows = props.rows;
     let now = dayjs().locale("jst");
+
+    if (rows.length == 0) {
+        return (
+            <>
+                <Typography variant="h4" textAlign="center" component="div"
+                    sx={{
+                        fontFamily: 'monospace',
+                        fontWeight: 700,
+                        letterSpacing: '.1rem',
+                        textDecoration: 'none',
+                    }}
+                >
+                    No tasks
+                    <ChecklistRtlIcon sx={{ fontSize: 30 }} />
+
+                </Typography>
+            </>
+        )
+    }
 
     return (
         <TableContainer component={Paper}>

@@ -39,9 +39,9 @@ function InputForm() {
     }
 
     return (
-        <div className="edit-button">
+        <div className="create-form">
 
-            <Button variant="contained" onClick={handleOpen} startIcon={<ModeEditOutline />}>
+            <Button className="create-button" onClick={handleOpen} startIcon={<ModeEditOutline />}>
                 Create task
             </Button>
             <Modal
