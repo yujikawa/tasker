@@ -30,10 +30,10 @@ function App() {
     <>
       <AppBar position="static">
         <Toolbar disableGutters>
-          <img className="logo" src="../src-tauri/icons/128x128.png" ></img>
           <Typography variant="h6" component="div"
             sx={{
               mr: 2,
+              ml: 2,
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
